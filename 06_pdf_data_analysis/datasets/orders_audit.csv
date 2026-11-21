@@ -1,0 +1,8 @@
+order_id,city,amount,status
+A,上海,100,paid
+B,北京,200,paid
+A,上海,100,paid
+C,上海,错误,paid
+D,北京,-50,paid
+E,深圳,500,unpaid
+

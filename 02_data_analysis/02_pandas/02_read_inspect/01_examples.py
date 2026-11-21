@@ -15,6 +15,9 @@
 import csv
 from pathlib import Path
 path = Path(__file__).resolve().parents[2] / "datasets" / "sales.csv"
+
+print(path)
+
 with path.open(encoding="utf-8", newline="") as file:
     rows = list(csv.DictReader(file))
 print("csv 行数：", len(rows))
@@ -50,7 +53,7 @@ print(data.describe(include="all"))
 
 # 常用读取与观察方式：同一个任务不只有一种 API。
 # read_csv 的 usecols 只读指定列，nrows 只读前几行，parse_dates 尝试把日期列直接解析为日期。
-sample = pd.read_csv(path, usecols=["order_id", "city", "amount"], nrows=3)
+sample = pd.read_csv(path, usecols=["order_id", "city", "price"], nrows=3)
 print("\n===== pd.read_csv(usecols=..., nrows=...) =====")
 print(sample)
 # head(n) 看开头，tail(n) 看结尾，sample(n, random_state=...) 随机抽样且可复现。
