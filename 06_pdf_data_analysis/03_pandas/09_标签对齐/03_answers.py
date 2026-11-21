@@ -1,16 +1,28 @@
-"""参考答案：顺序不同的商品如何相加"""
+"""参考答案：对齐两班次不同设备的产量"""
 # 对应 PDF：13-pandas-full.pdf 第 14、29—30 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+# 课件核心：第14、29—30页：Series/DataFrame按标签对齐后运算，未匹配位置缺失。
+# 扩展：add(fill_value=0)为扩展；仅在确认缺记录表示未生产时补零。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | 班次 | device | units |
+# |---|---|---|
+# | morning | M2 | 30 |
+# | morning | M1 | 20 |
+# | evening | M3 | 15 |
+# | evening | M2 | 25 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
 import pandas as pd
-jan=pd.Series([100,200],index=["A","B"])
-feb=pd.Series([30,40],index=["B","C"])
-default=jan+feb
-total=jan.add(feb,fill_value=0)
+morning = pd.Series([30,20],index=['M2','M1'])
+evening = pd.Series([15,25],index=['M3','M2'])
+default = morning + evening
 print('\n===== default =====')
 print(default)
-print('\n===== total =====')
-print(total)
-assert default.loc["B"]==230 and default.isna().sum()==2
-assert total.to_dict()=={"A":100.,"B":230.,"C":40.}
-pd.testing.assert_series_equal(total,jan.add(feb.iloc[::-1],fill_value=0))
+assert default.loc['M2'] == 55
+assert pd.isna(default.loc['M1']) and pd.isna(default.loc['M3'])
+assert default.equals(morning + evening.iloc[::-1])
+# 扩展：fill_value只补参与加法的一侧缺值，不说明业务上所有缺失都应填0。
+daily = morning.add(evening,fill_value=0)
+print('\n===== daily =====')
+print(daily)
+assert daily.to_dict() == {'M1':20,'M2':55,'M3':15}
+assert daily.sum() == 90

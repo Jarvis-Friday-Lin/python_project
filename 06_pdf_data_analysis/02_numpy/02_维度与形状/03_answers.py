@@ -1,14 +1,22 @@
-"""参考答案：从一名学生到多个班级"""
+"""参考答案：两台机器三天的温度结构"""
 # 对应 PDF：11-numpy-full.pdf 第 3、8、16 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+# 课件核心：第3、8、16页：ndarray、维数、形状、向量/矩阵。
+# 扩展：size是数组元素数量属性；用轴含义解释三维结构。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | machine | day1 | day2 | day3 |
+# |---|---|---|---|
+# | M1 | 31 | 34 | 33 |
+# | M2 | 28 | 30 | 29 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
 import numpy as np
-scores = np.array([[80,70,90],[60,85,75]])
-classes = np.array([scores, scores + 1])
-print('\n===== (scores.ndim, scores.shape, scores.size) =====')
-print((scores.ndim, scores.shape, scores.size))
-print('\n===== classes[1,0,2] =====')
-print(classes[1,0,2])
-assert (scores.ndim, scores.shape, scores.size) == (2,(2,3),6)
-assert classes.shape == (2,2,3)
-assert classes[1,0,2] == 91
+temperature = np.array([[31, 34, 33], [28, 30, 29]])
+workshops = np.array([temperature, temperature - 2])
+print('\n===== (temperature.ndim, temperature.shape, temperature.size) =====')
+print((temperature.ndim, temperature.shape, temperature.size))
+print('\n===== workshops[1, 1, 2] =====')
+print(workshops[1, 1, 2])
+assert (temperature.ndim, temperature.shape, temperature.size) == (2, (2, 3), 6)
+assert workshops.shape == (2, 2, 3) and workshops[1, 1, 2] == 27
+assert temperature[0].shape == (3,) and temperature[0:1].shape == (1, 3)
+# 三根轴依次表示车间、机器、日期；整数索引会消去被选中的轴。

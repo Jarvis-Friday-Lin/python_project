@@ -1,16 +1,26 @@
-"""参考答案：把连续成绩整理成不同维度"""
+"""参考答案：传感器扁平数据的重排"""
 # 对应 PDF：11-numpy-full.pdf 第 23—28 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+# 课件核心：第23—28页：reshape、-1自动推断、transpose和一维转置。
+# 扩展：无。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | 数据 | 定义 |
+# |---|---|
+# | readings | 从10到33共24个连续整数 |
+# | 初始布局 | 2台机器×3天×4个时段 |
+# | 目标布局 | 4个时段×2台机器×3天 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
 import numpy as np
-a=np.arange(12).reshape(3,4)
-print('\n===== a.T =====')
-print(a.T)
-print('\n===== a.reshape(4,3) =====')
-print(a.reshape(4,3))
-assert a.T[1].tolist()==[1,5,9]
-assert a.reshape(4,3)[1].tolist()==[3,4,5]
-cube=np.arange(24).reshape(2,3,4)
-b=cube.transpose(2,0,1)
-assert b.shape==(4,2,3)
-assert b[3,1,2]==cube[1,2,3]==23
+readings = np.arange(10,34)
+source = readings.reshape(2,3,4)
+target = source.transpose(2,0,1)
+print('\n===== target =====')
+print(target)
+print('\n===== (target.shape, target[3, 1, 2]) =====')
+print((target.shape, target[3,1,2]))
+assert target.shape == (4,2,3)
+assert target[3,1,2] == source[1,2,3] == 33
+assert not np.array_equal(target, readings.reshape(4,2,3))
+assert readings.reshape(6,-1).shape == (6,4)
+assert readings.T.shape == (24,)
+# reshape按元素遍历顺序重新分组；transpose改变轴的角色，不是同一种重排。

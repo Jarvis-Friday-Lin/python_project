@@ -1,16 +1,31 @@
-"""参考答案：同一批成绩为什么能画出不同分布"""
+"""参考答案：配送时长的直方图边界"""
 # 对应 PDF：14-matplotlib-full.pdf 第 18—19 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+# 课件核心：第18—19页：hist、bins、颜色、透明度与边框。
+# 扩展：density参数与密度积分检查为扩展；bin边界含义属于结果理解。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | delivery_minutes |
+# |---|
+# | 5,8,10,12,15,18,20,22,25,30,35,40 |
+# | 基础分箱边界：0,10,20,30,40 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
 import numpy as np
 import matplotlib.pyplot as plt
-scores=np.array([50,60,65,70,75,80,85,90,95,100])
-fig,axes=plt.subplots(1,2)
-counts,edges,_=axes[0].hist(scores,bins=[50,70,90,101],edgecolor="black")
-density,bounds,_=axes[1].hist(scores,bins=5,density=True,edgecolor="black")
+minutes = np.array([5,8,10,12,15,18,20,22,25,30,35,40])
+fig, axes = plt.subplots(1,3,figsize=(12,3))
+counts, edges, _ = axes[0].hist(minutes,bins=[0,10,20,30,40],color='blue',alpha=0.7,edgecolor='black')
+axes[1].hist(minutes,bins=6,edgecolor='black')
+density, density_edges, _ = axes[2].hist(minutes,bins=6,density=True)
+for ax in axes:
+    ax.set_xlabel('Delivery time (min)')
+axes[0].set_ylabel('Count')
+axes[1].set_ylabel('Count')
+axes[2].set_ylabel('Density')
 print('\n===== counts =====')
 print(counts)
-assert counts.tolist()==[3,4,3] and counts.sum()==10
-assert np.isclose((density*np.diff(bounds)).sum(),1)
-# 箱太少掩盖结构，箱太多使随机波动显眼，应结合样本量与业务区间。
+assert counts.tolist() == [2,4,3,3] and counts.sum() == 12
+# 前三箱左闭右开，最后一箱两端都包含，40不会被丢弃。
+assert np.isclose(np.sum(density*np.diff(density_edges)),1)
+fig.tight_layout()
 plt.show()
+plt.close(fig)

@@ -1,131 +1,100 @@
-"""参考答案：文档末尾27道操作题"""
+"""参考答案：课件27题的变式操作自测"""
 # 对应 PDF：11-numpy-full.pdf 第 63—66 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+# 课件核心：第63—66页原27题知识点顺序不变，改数据与提取位置，不是原题原样复制。
+# 扩展：default_rng固定种子为扩展；题号仍与原27题操作对应。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | 符号 | 本次变式输入 |
+# |---|---|
+# | A | 长度12的零数组 |
+# | B | 30到54，步长2，包含54 |
+# | D | 10到21的整数，整理为3×4 |
+# | E | [[2,4],[6,8],[10,12]] |
+# | F | [5,0,2,0,0,9] |
+# | G | 2×3×4随机小数，种子11 |
+# | H | [2,8,4,10,6] |
+# | I | [2,4]，追加[6,8] |
+# | J与K | J=[2,4,6]，K=[1,2,3] |
+# | L | 6个-3 |
+# | M | [9,3,7,1] |
+# | N | [[2,1],[1,1]] |
+# | O | [[1,2,3],[4,5,6],[7,8,9]] |
+# | P | 1到20依次整理为4×5 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
 import numpy as np
-# 01：zeros的shape可以是整数，表示一维长度。
-A=np.zeros(15)
+# 1—7：创建、字节数、范围终点、反转、形状与非零位置。
+A = np.zeros(12)
 print('\n===== A =====')
 print(A)
-assert A.shape==(15,) and np.all(A==0)
-# 02：nbytes等于size*itemsize，只计算元素缓冲区。
-print('\n===== A.nbytes =====')
-print(A.nbytes)
-assert A.nbytes==A.size*A.itemsize
-# 03：arange右端不包含，所以写61。
-B=np.arange(20,61)
+print('\n===== A.size * A.itemsize =====')
+print(A.size * A.itemsize)
+B = np.arange(30,55,2)
+C = B[::-1]
+D = np.arange(10,22).reshape(3,4)
+E = np.array([[2,4],[6,8],[10,12]])
+F = np.array([5,0,2,0,0,9])
 print('\n===== B =====')
 print(B)
-assert B[0]==20 and B[-1]==60 and B.size==41
-# 04：负步长从尾到头读取。
-C=B[::-1]
 print('\n===== C =====')
 print(C)
-assert C[0]==60 and C[-1]==20
-# 05：reshape保持总元素数。
-D=np.arange(16).reshape(4,4)
 print('\n===== D =====')
 print(D)
-assert D.shape==(4,4) and D[-1,-1]==15
-# 06：文档这里“dimensions”问的是形状，同时补充轴数避免歧义。
-E=np.array([[3,4,5],[6,7,8]])
 print('\n===== E.shape =====')
 print(E.shape)
-print('\n===== E.ndim =====')
-print(E.ndim)
-assert E.shape==(2,3) and E.ndim==2
-# 07：nonzero返回每个轴的位置数组组成的元组，一维取[0]。
-F=np.array([0,3,0,0,4,0])
 print('\n===== F.nonzero() =====')
 print(F.nonzero())
-assert F.nonzero()[0].tolist()==[1,4]
-# 08：新式Generator确保教学复现，不修改全局随机状态。
-G=np.random.default_rng(42).random((3,3,3))
+assert len(B) == 13 and B[-1] == 54 and C[0] == 54
+assert D.shape == (3,4) and E.shape == (3,2)
+assert F.nonzero()[0].tolist() == [0,2,5]
+# 8—14：随机数值不固定预期列表，固定种子后检查范围、形状。
+G = np.random.default_rng(11).random((2,3,4))
+H = np.array([2,8,4,10,6])
 print('\n===== G =====')
 print(G)
-assert G.shape==(3,3,3) and np.all((G>=0)&(G<1))
-H=np.array([1,13,0,56,71,22])
-# 09、10：返回数值而非位置。
-print('\n===== H.max() =====')
-print(H.max())
-print('\n===== H.min() =====')
-print(H.min())
-assert H.max()==71 and H.min()==0
-# 11、12、13：均值、总体标准差、中位数。
-print('\n===== H.mean() =====')
-print(H.mean())
-print('\n===== H.std(ddof=0) =====')
-print(H.std(ddof=0))
-print('\n===== np.median(H) =====')
-print(np.median(H))
-assert np.isclose(H.mean(),163/6) and np.median(H)==17.5
-assert np.isclose(H.std(),np.sqrt(((H-H.mean())**2).mean()))
-# 14：二维转置交换行列轴。
+print('\n===== (H.max(), H.min(), H.mean(), H.std(), np.median(H)) =====')
+print((H.max(), H.min(), H.mean(), H.std(), np.median(H)))
 print('\n===== D.T =====')
 print(D.T)
-assert np.array_equal(D.T[0],D[:,0])
-# 15：append生成新数组，不改变I。
-I=np.array([1,2,3])
-appended=np.append(I,[4,5,6])
-print('\n===== appended =====')
-print(appended)
-assert I.tolist()==[1,2,3] and appended.tolist()==[1,2,3,4,5,6]
-# 16：每个位置一对一操作，除法返回浮点。
-J=np.array([1,2,3])
-K=np.array([4,5,6])
-print('\n===== J+K =====')
-print(J+K)
-print('\n===== J-K =====')
-print(J-K)
-print('\n===== J*K =====')
-print(J*K)
-print('\n===== J/K =====')
-print(J/K)
-assert (J+K).tolist()==[5,7,9] and (J-K).tolist()==[-3,-3,-3]
-assert (J*K).tolist()==[4,10,18] and np.allclose(J/K,[.25,.4,.5])
-# 17、18：明确使用原I，消除前题重绑定变量可能造成的歧义。
-print('\n===== I.sum() =====')
-print(I.sum())
+assert G.shape == (2,3,4) and ((G >= 0) & (G < 1)).all()
+assert (H.max(), H.min(), H.mean(), np.median(H)) == (10,2,6,6)
+assert np.isclose(H.std(), np.sqrt(8))
+# 15—19：append返回新数组；log是自然对数，不是以10为底。
+I = np.array([2,4])
+extended = np.append(I,[6,8])
+J, K = np.array([2,4,6]), np.array([1,2,3])
+L = np.full(6,-3)
+print('\n===== extended =====')
+print(extended)
+print('\n===== (J + K, J - K, J * K, J / K) =====')
+print((J+K, J-K, J*K, J/K))
+print('\n===== np.sum(I) =====')
+print(np.sum(I))
 print('\n===== np.log(I) =====')
 print(np.log(I))
-assert I.sum()==6 and np.isclose(np.log(I)[0],0)
-# 19：原文no.full是笔误，正确命名是np.full。
-L=np.full(5,8)
 print('\n===== L =====')
 print(L)
-print('\n===== np.repeat(8,5) =====')
-print(np.repeat(8,5))
-assert np.array_equal(L,np.repeat(8,5))
-# 20—23：排序值、最大位置、最小位置和排序索引分别处理。
-M=np.array([2,5,7,3,6])
+assert I.tolist() == [2,4] and extended.tolist() == [2,4,6,8]
+assert np.sum(I) == 6 and np.allclose(np.log(I), [np.log(2),np.log(4)])
+assert np.array_equal(L,np.repeat(-3,6))
+# 20—27：argsort返回位置；基本切片的起始位置从0计数。
+M = np.array([9,3,7,1])
+N = np.array([[2,1],[1,1]])
+O = np.arange(1,10).reshape(3,3)
+P = np.arange(1,21).reshape(4,5)
 print('\n===== np.sort(M) =====')
 print(np.sort(M))
-print('\n===== M.argmax() =====')
-print(M.argmax())
-print('\n===== M.argmin() =====')
-print(M.argmin())
-print('\n===== M.argsort() =====')
-print(M.argsort())
-assert np.sort(M).tolist()==[2,3,5,6,7]
-assert M.argmax()==2 and M.argmin()==0
-assert M.argsort().tolist()==[0,3,1,4,2]
-# 24：逆矩阵用乘回单位矩阵检查，浮点不用==逐项严格比。
-N=np.array([[6,1,1],[4,-2,5],[2,8,7]])
-inverse=np.linalg.inv(N)
-print('\n===== inverse =====')
-print(inverse)
-assert np.allclose(N@inverse,np.eye(3))
-# 25：abs逐元素转换，负2变成2。
-print('\n===== np.abs(N) =====')
-print(np.abs(N))
-assert np.abs(N)[1,1]==2
-# 26：第三列位置是2，返回一维数组。
-O=np.array([[11,22,33],[44,55,66],[77,88,99]])
-print('\n===== O[:,2] =====')
-print(O[:,2])
-assert O[:,2].tolist()==[33,66,99]
-# 27：日常奇数行从位置0起步2；偶数列从位置1起步2。
-P=np.arange(3,61,3).reshape(5,4)
-print('\n===== P[::2,1::2] =====')
-print(P[::2,1::2])
-assert P[::2,1::2].tolist()==[[6,12],[30,36],[54,60]]
+print('\n===== (M.argmax(), M.argmin(), M.argsort()) =====')
+print((M.argmax(),M.argmin(),M.argsort()))
+print('\n===== np.linalg.inv(N) =====')
+print(np.linalg.inv(N))
+print('\n===== np.abs(-N) =====')
+print(np.abs(-N))
+print('\n===== O[:, 1] =====')
+print(O[:,1])
+print('\n===== P[1::2, ::2] =====')
+print(P[1::2,::2])
+assert M.argsort().tolist() == [3,1,2,0]
+assert M.argmax() == 0 and M.argmin() == 3
+assert np.allclose(N @ np.linalg.inv(N), np.eye(2))
+assert O[:,1].tolist() == [2,5,8]
+assert P[1::2,::2].tolist() == [[6,8,10],[16,18,20]]

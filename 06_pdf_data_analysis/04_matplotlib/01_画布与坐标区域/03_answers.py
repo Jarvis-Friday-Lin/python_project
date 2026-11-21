@@ -1,13 +1,26 @@
-"""参考答案：从一张空白画布到销售趋势"""
-# 对应 PDF：14-matplotlib-full.pdf 第 2—7 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+"""参考答案：绘制房间四个时刻的温度"""
+# 对应 PDF：14-matplotlib-full.pdf 第2—7、11页
+# 课件核心：第2—7、11页：Figure/Axes、subplots、plot、轴标签与标题。
+# 扩展：fig.axes与Line2D读取数据是对象检查扩展。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | hour | temperature_c |
+# |---|---|
+# | 6 | 16 |
+# | 10 | 21 |
+# | 14 | 25 |
+# | 18 | 20 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
 import matplotlib.pyplot as plt
-fig,ax=plt.subplots(figsize=(6,4))
-ax.plot([1,2,3],[10,20,15],marker="o")
-ax.set(xlabel="Day",ylabel="Sales (units)",title="Three-day sales")
-assert len(fig.axes)==1
-assert list(ax.lines[0].get_ydata())==[10,20,15]
-# Figure是画布；Axes是绘图区；Axis管理一个坐标方向的刻度等。
+hours, temperature = [6,10,14,18], [16,21,25,20]
+fig, ax = plt.subplots(figsize=(7,3))
+line, = ax.plot(hours,temperature,marker='o')
+ax.set_xlabel('Hour')
+ax.set_ylabel('Temperature (C)')
+ax.set_title('Room temperature')
+# Figure是整张画布；ax是一个绘图区；ax.xaxis/ax.yaxis是该图内的两根坐标轴。
+assert len(fig.axes) == 1 and len(line.get_xdata()) == 4
+assert list(line.get_ydata()) == temperature
+assert list(fig.get_size_inches()) == [7,3]
 plt.show()
-
+plt.close(fig)

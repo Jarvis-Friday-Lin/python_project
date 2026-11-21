@@ -1,19 +1,21 @@
-"""动手练习：接到一张表先检查什么"""
+"""迁移练习：第一次接收设备巡检表"""
 # 对应 PDF：13-pandas-full.pdf 第 18—20 页；补充head/info/describe用于检查
-# 案例数据（请根据表格自行创建对象）：
-# | name | city | score |
-# |---|---|---:|
-# | 小林 | 上海 | 95 |
-# | 小周 | 北京 | 84 |
-# | 小陈 | 上海 | 90 |
-# | 小李 | 深圳 | 75 |
-# 
+# 课件核心：第18—20页：columns、index、values、取列。
+# 扩展：head/info/describe/to_numpy和检查属性为扩展；None表示真缺失，不是字符串。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | device | room | hours |
+# |---|---|---|
+# | D1 | A | 10 |
+# | D2 | B | 20 |
+# | D3 | A | 30 |
+# | D4 | A | None |
+# | D5 | C | 40 |
+#
 # 业务任务与本题要求：
-# 1. 根据上表建立DataFrame，展示前2行、shape、dtypes、info和describe(include='all')。
-# 2. 说明city的count=4、unique=3、top=上海、freq=2，score均值86。
-# 3. 只将score列转为(4,1)数值数组，检查不是把姓名也混进去。
-# 
-# 在下方编写代码；先独立完成，再运行 03_answers.py 对照。
+# 1. 基础任务：创建巡检表，展示列名、索引、前3行和类型信息。
+# 2. 应用任务：describe(include="all")后解释room的count/unique/top/freq以及hours的count/mean，不能把行数当有效工时数。
+# 3. 扩展任务：仅取hours转换成(5,1)数值数组；验证其中一个缺失，输出结果前保留表达式分隔符。
+#
+# 请先独立完成；结果和解释请在自己的代码中验证，再对照 03_answers.py。
 
-# TODO：根据上面的数据和本题要求，编写你的实现。
-
+# TODO：创建数据、完成任务并检查结果。

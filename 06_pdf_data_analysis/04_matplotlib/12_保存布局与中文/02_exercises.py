@@ -1,19 +1,20 @@
-"""动手练习：把图保存成可交付文件"""
+"""迁移练习：交付可重复生成的能耗图片"""
 # 对应 PDF：14-matplotlib-full.pdf 第 21 页；中文字体与路径为实用补充
-# 案例数据（请根据表格自行创建对象）：
-# | day | sales |
-# |---:|---:|
-# | 1 | 10 |
-# | 2 | 20 |
-# | 3 | 15 |
-# 
+# 课件核心：第21页savefig、第11页plot与标签、第12页tight_layout。
+# 扩展：中文字体检测、pathlib、dpi与bbox_inches是实用扩展；不以关闭安全校验解决字体问题。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | month | energy_kwh |
+# |---|---|
+# | Jan | 320 |
+# | Feb | 280 |
+# | Mar | 350 |
+# | Apr | 300 |
+#
 # 业务任务与本题要求：
-# 1. 按表创建销售图，检查当前字体，能用中文则用中文，否则用英文标签。
-# 2. 输出到本节outputs/exercise_sales.png及exercise_sales.pdf，PNG设dpi=160。
-# 3. 保存前tight_layout，使用bbox_inches='tight'；保存后检查文件大于0字节。
-# 4. 改变PyCharm工作目录后再运行，确认仍写到本节outputs。
-# 
-# 在下方编写代码；先独立完成，再运行 03_answers.py 对照。
+# 1. 基础任务：绘制四个月能耗折线，注明kWh，保存本节outputs/energy_report.png和energy_report.pdf。
+# 2. 应用任务：PNG使用dpi=180，保存前tight_layout，保存时bbox_inches="tight"。
+# 3. 扩展任务：检测可用中文字体，有则用中文标题和轴标签，否则英文；换工作目录执行后仍输出到同一路径，检查两个文件非空。
+#
+# 请先独立完成；结果和解释请在自己的代码中验证，再对照 03_answers.py。
 
-# TODO：根据上面的数据和本题要求，编写你的实现。
-
+# TODO：创建数据、完成任务并检查结果。

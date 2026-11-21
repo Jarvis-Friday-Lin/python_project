@@ -49,6 +49,11 @@ def main():
                 if filename == "02_exercises.py":
                     assert "# |" in source, "练习缺少案例数据表"
                     assert "业务任务与本题要求" in source, "练习缺少独立要求"
+                    tables = lambda text: [line.strip() for line in text.splitlines() if line.startswith("# |")]
+                    assert tables(source) != tables((folder / "01_examples.py").read_text()), "练习沿用了示例的完整数据表"
+                    assert tables(source) == tables((folder / "03_answers.py").read_text()), "答案与练习数据表不一致"
+                    assert "课件核心" in source and "扩展" in source, "缺少课件核心/扩展范围说明"
+                    assert "基础任务" in source and "应用任务" in source, "缺少递进的独立任务"
                     continue
                 assert any(isinstance(n, ast.Assert) for n in ast.walk(tree)), "缺少结果检查"
                 lines = source.splitlines()

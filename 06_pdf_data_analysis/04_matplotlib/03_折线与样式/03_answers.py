@@ -1,17 +1,33 @@
-"""参考答案：对比实际销量与目标销量"""
+"""参考答案：对比两条线路的公交等候时间"""
 # 对应 PDF：14-matplotlib-full.pdf 第 10—13 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+# 课件核心：第10—13页：plot多条线、marker、color、linestyle与legend。
+# 扩展：Line2D对象读取/修改为验证扩展。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | hour | route_A | route_B |
+# |---|---|---|
+# | 7 | 8 | 12 |
+# | 9 | 6 | 7 |
+# | 12 | 10 | 8 |
+# | 18 | 15 | 11 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
+import numpy as np
 import matplotlib.pyplot as plt
-days=[1,2,3]
-actual=[10,20,15]
-target=[15,15,15]
-fig,ax=plt.subplots()
-ax.plot(days,actual,marker="o",linestyle="None",label="Actual")
-ax.plot(days,target,color="red",linestyle="--",label="Target")
+hours, a, b = [7,9,12,18], np.array([8,6,10,15]), np.array([12,7,8,11])
+fig, ax = plt.subplots()
+line_a, = ax.plot(hours,a,color='blue',linestyle='-',marker='o',label='Route A')
+ax.plot(hours,b,color='orange',linestyle='--',marker='x',label='Route B')
+ax.set_xlabel('Hour')
+ax.set_ylabel('Minutes')
 ax.legend()
-ax.set(xlabel="Day",ylabel="Sales",title="Actual vs target")
-assert [a-b for a,b in zip(actual,target)]==[-5,5,0]
-assert ax.get_legend_handles_labels()[1]==["Actual","Target"]
-assert len(ax.lines[0].get_ydata())==3
+diff = a-b
+print('\n===== diff =====')
+print(diff)
+assert diff.tolist() == [-4,-1,2,4]
+assert np.array(hours)[diff > 0].tolist() == [12,18]
+assert ax.get_legend_handles_labels()[1] == ['Route A','Route B']
+# 扩展：只修改线型，不删除坐标数据；None字符串表示不画连接线。
+line_a.set_linestyle('None')
+assert len(line_a.get_xdata()) == 4 and line_a.get_linestyle() == 'None'
 plt.show()
+plt.close(fig)

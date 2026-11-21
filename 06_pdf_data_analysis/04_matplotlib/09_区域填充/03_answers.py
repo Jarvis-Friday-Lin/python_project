@@ -1,20 +1,34 @@
-"""参考答案：标出实际与目标的差额区域"""
+"""参考答案：标出水库水位超出参考线的区间"""
 # 对应 PDF：14-matplotlib-full.pdf 第 25 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+# 课件核心：第25页：fill_between、两条曲线、color/alpha/label。
+# 扩展：where/interpolate条件填充为扩展；面积不是水量测量。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | day | level_m | reference_m |
+# |---|---|---|
+# | 1 | 9 | 10 |
+# | 2 | 11 | 10 |
+# | 3 | 13 | 10 |
+# | 4 | 10 | 10 |
+# | 5 | 8 | 10 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
 import numpy as np
 import matplotlib.pyplot as plt
-x=np.arange(1,5)
-a=np.array([10,20,18,12])
-t=np.full(4,15)
-fig,ax=plt.subplots()
-ax.plot(x,a,label="Actual")
-ax.plot(x,t,label="Target")
-ax.fill_between(x,a,t,where=a>=t,interpolate=True,color="green",alpha=.25)
-ax.fill_between(x,a,t,where=a<t,interpolate=True,color="red",alpha=.15)
+days, level = np.arange(1,6), np.array([9,11,13,10,8])
+reference = np.full(5,10)
+fig, ax = plt.subplots()
+ax.plot(days,level,label='Measured',marker='o')
+ax.plot(days,reference,label='Reference',linestyle='--')
+# 扩展：where提供每个采样点是否参与填充；interpolate补上交叉处边界。
+ax.fill_between(days,level,reference,where=level > reference,interpolate=True,color='orange',alpha=0.4,label='Above')
+ax.fill_between(days,level,reference,where=level < reference,interpolate=True,color='blue',alpha=0.3,label='Below')
+ax.set_xlabel('Day')
+ax.set_ylabel('Water level (m)')
 ax.legend()
-assert len(ax.lines)==2 and len(ax.collections)==2
-assert (a-t).tolist()==[-5,5,3,-3]
-# 图形面积包含对采样点之间的插值，离散总盈余应直接对每日差额求和。
-assert (a-t).sum()==0
+counts = ((level > reference).sum(),(level == reference).sum(),(level < reference).sum())
+print('\n===== counts =====')
+print(counts)
+assert counts == (2,1,2) and len(ax.lines) == 2 and len(ax.collections) == 2
+# 横轴是天、纵轴是米，带状面积并非立方米水量，更不包含水库横截面信息。
 plt.show()
+plt.close(fig)

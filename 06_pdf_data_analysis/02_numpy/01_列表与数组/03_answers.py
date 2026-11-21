@@ -1,16 +1,27 @@
-"""参考答案：给成绩批量加分"""
-# 对应 PDF：11-numpy-full.pdf 第 2、52—56 页
-# 建议先完成 02_exercises.py；下面的实现与该题数据、要求一一对应。
+"""参考答案：把摄氏温度批量换算为华氏温度"""
+# 对应 PDF：11-numpy-full.pdf 第2、15、52—56页
+# 课件核心：11-numpy-full.pdf 第2、15、52—56页：数组与列表、逐元素算术。
+# 扩展：无新增API；温度换算公式是案例背景。
+# 案例数据（据此自行创建对象，不能照抄 examples 的数据）：
+# | 时刻 | celsius |
+# |---|---|
+# | 08:00 | -10 |
+# | 12:00 | 0 |
+# | 16:00 | 25 |
+# | 20:00 | 40 |
+# 建议先做练习，再逐段对照下面的实现；assert 用于验证结果。
 
 import numpy as np
-scores = [80, 90, 70]
-loop = [x + 5 for x in scores]
-a = np.array(scores)
-print('\n===== a + 5 =====')
-print(a + 5)
-print('\n===== a * 2 =====')
-print(a * 2)
-assert (a + 5).tolist() == loop == [85, 95, 75]
-assert (a * 2).tolist() == [160, 180, 140]
-assert a.tolist() == scores
-# 列表 *2 重复其元素序列，数组 *2 对数值做乘法。
+celsius = [-10, 0, 25, 40]
+manual = [v * 1.8 + 32 for v in celsius]
+a = np.array(celsius)
+fahrenheit = a * 1.8 + 32
+print('\n===== fahrenheit =====')
+print(fahrenheit)
+print('\n===== fahrenheit.max() =====')
+print(fahrenheit.max())
+assert np.allclose(fahrenheit, manual)
+assert np.allclose((fahrenheit - 32) / 1.8, a)
+assert np.array_equal(a, celsius)
+assert fahrenheit.max() == 104
+# 列表乘整数重复列表；数组乘标量则逐元素计算。
