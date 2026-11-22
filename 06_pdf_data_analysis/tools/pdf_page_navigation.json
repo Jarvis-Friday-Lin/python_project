@@ -1,0 +1,1664 @@
+{
+  "11-numpy-full": {
+    "1": {
+      "status": "封面",
+      "note": "本页为封面，无直接练习。尚不熟悉容器或函数参数时，可先看下列前置内容。",
+      "groups": [
+        {
+          "lesson": "01_基础准备/01_数据容器与遍历",
+          "kind": "前置补充"
+        },
+        {
+          "lesson": "01_基础准备/02_函数参数与对象",
+          "kind": "前置补充"
+        }
+      ]
+    },
+    "2": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/01_列表与数组",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "3": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/02_维度与形状",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "4": {
+      "status": "知识页",
+      "note": "常量/单位矩阵对应第03节；随机数组对应第04节。",
+      "groups": [
+        {
+          "lesson": "02_numpy/03_常量与特殊数组",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "02_numpy/04_序列与随机数",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "5": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/06_索引与切片",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "6": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/06_索引与切片",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "7": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/06_索引与切片",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "8": {
+      "status": "知识页",
+      "note": "切片选择对应第06节；结果维数与形状可回看第02节。",
+      "groups": [
+        {
+          "lesson": "02_numpy/06_索引与切片",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "02_numpy/02_维度与形状",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "9": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/07_整数数组索引",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "10": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/07_整数数组索引",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "11": {
+      "status": "知识页",
+      "note": "课件核心是元素掩码与逻辑条件；练习中的all/any整行判断已标为扩展。",
+      "groups": [
+        {
+          "lesson": "02_numpy/08_布尔筛选",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "12": {
+      "status": "知识页",
+      "note": "课件核心是元素掩码与逻辑条件；练习中的all/any整行判断已标为扩展。",
+      "groups": [
+        {
+          "lesson": "02_numpy/08_布尔筛选",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "13": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/05_类型与内存",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "14": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/05_类型与内存",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "15": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/09_逐元素运算",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "16": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/02_维度与形状",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "17": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/16_点积与矩阵乘法",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "18": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/16_点积与矩阵乘法",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "19": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/16_点积与矩阵乘法",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "20": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/16_点积与矩阵乘法",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "21": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/16_点积与矩阵乘法",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "22": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/10_统计与axis",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "23": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/12_重塑与转置",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "24": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/12_重塑与转置",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "25": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/12_重塑与转置",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "26": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/12_重塑与转置",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "27": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/12_重塑与转置",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "28": {
+      "status": "知识页",
+      "note": "arange生成连续整数可复习第04节；主要知识仍为reshape。",
+      "groups": [
+        {
+          "lesson": "02_numpy/12_重塑与转置",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "02_numpy/04_序列与随机数",
+          "kind": "相关复习"
+        }
+      ]
+    },
+    "29": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/13_增加维度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "30": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/13_增加维度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "31": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/13_增加维度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "32": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/13_增加维度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "33": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/13_增加维度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "34": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/13_增加维度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "35": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/14_视图与复制",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "36": {
+      "status": "知识页",
+      "note": "astype类型转换可复习第05节。",
+      "groups": [
+        {
+          "lesson": "02_numpy/14_视图与复制",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "02_numpy/05_类型与内存",
+          "kind": "相关复习"
+        }
+      ]
+    },
+    "37": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "38": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "39": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "40": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "41": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "42": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "43": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "44": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "45": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "46": {
+      "status": "知识页",
+      "note": "中心化对应广播章节；axis与按列均值对应统计章节。",
+      "groups": [
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "02_numpy/10_统计与axis",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "47": {
+      "status": "知识页",
+      "note": "本页只对应距离部分；第18节的性能比较需继续读第52—55页。",
+      "groups": [
+        {
+          "lesson": "02_numpy/18_距离与性能验证",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "48": {
+      "status": "知识页",
+      "note": "本页只对应距离部分；第18节的性能比较需继续读第52—55页。",
+      "groups": [
+        {
+          "lesson": "02_numpy/18_距离与性能验证",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "49": {
+      "status": "知识页",
+      "note": "本页只对应距离部分；第18节的性能比较需继续读第52—55页。",
+      "groups": [
+        {
+          "lesson": "02_numpy/18_距离与性能验证",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "50": {
+      "status": "知识页",
+      "note": "本页只对应距离部分；第18节的性能比较需继续读第52—55页。",
+      "groups": [
+        {
+          "lesson": "02_numpy/18_距离与性能验证",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "51": {
+      "status": "知识页",
+      "note": "本页只对应距离部分；第18节的性能比较需继续读第52—55页。",
+      "groups": [
+        {
+          "lesson": "02_numpy/18_距离与性能验证",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "52": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/01_列表与数组",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "53": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/01_列表与数组",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "54": {
+      "status": "知识页",
+      "note": "课件演示递归统计内存；配套练习聚焦dtype与元素缓冲区大小，两者不是相同内存口径。",
+      "groups": [
+        {
+          "lesson": "02_numpy/05_类型与内存",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "55": {
+      "status": "知识页",
+      "note": "本页对应性能计时部分；距离部分在第47—51页。",
+      "groups": [
+        {
+          "lesson": "02_numpy/18_距离与性能验证",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "56": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/01_列表与数组",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "57": {
+      "status": "术语总览",
+      "note": "本页为术语与致谢，没有新增专项练习；下列27题变式用于回顾主要数组操作。",
+      "groups": [
+        {
+          "lesson": "02_numpy/19_PDF原题自测",
+          "kind": "章节自测"
+        }
+      ]
+    },
+    "58": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/01_列表与数组",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/02_维度与形状",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/03_常量与特殊数组",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "59": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/03_常量与特殊数组",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/02_维度与形状",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/15_广播与中心化",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/16_点积与矩阵乘法",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "60": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/16_点积与矩阵乘法",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/12_重塑与转置",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/07_整数数组索引",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/13_增加维度",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "61": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/16_点积与矩阵乘法",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/10_统计与axis",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "02_numpy/07_整数数组索引",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "62": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "02_numpy/14_视图与复制",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "63": {
+      "status": "原题与答案",
+      "note": "练习按原27题知识点顺序改为变式，使用02_exercises.py中的新输入，不直接照抄课件答案。",
+      "groups": [
+        {
+          "lesson": "02_numpy/19_PDF原题自测",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "64": {
+      "status": "原题与答案",
+      "note": "练习按原27题知识点顺序改为变式，使用02_exercises.py中的新输入，不直接照抄课件答案。 排序位置与追加/重复/求逆可分别回看第11、17节。",
+      "groups": [
+        {
+          "lesson": "02_numpy/19_PDF原题自测",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "02_numpy/11_排序与位置",
+          "kind": "专项复习"
+        },
+        {
+          "lesson": "02_numpy/17_追加重复与求逆",
+          "kind": "专项复习"
+        }
+      ]
+    },
+    "65": {
+      "status": "原题与答案",
+      "note": "练习按原27题知识点顺序改为变式，使用02_exercises.py中的新输入，不直接照抄课件答案。",
+      "groups": [
+        {
+          "lesson": "02_numpy/19_PDF原题自测",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "66": {
+      "status": "原题与答案",
+      "note": "练习按原27题知识点顺序改为变式，使用02_exercises.py中的新输入，不直接照抄课件答案。 排序位置与追加/重复/求逆可分别回看第11、17节。",
+      "groups": [
+        {
+          "lesson": "02_numpy/19_PDF原题自测",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "02_numpy/11_排序与位置",
+          "kind": "专项复习"
+        },
+        {
+          "lesson": "02_numpy/17_追加重复与求逆",
+          "kind": "专项复习"
+        }
+      ]
+    },
+    "67": {
+      "status": "结束页",
+      "note": "本页为结束页，无新增练习；完成Pandas建表、索引与计算后，可做下面的跨课件综合案例。",
+      "groups": [
+        {
+          "lesson": "05_综合案例/01_成绩分析",
+          "kind": "综合扩展"
+        }
+      ]
+    }
+  },
+  "13-pandas-full": {
+    "1": {
+      "status": "封面",
+      "note": "本页为封面，无对应专项练习；从第2页开始阅读。路径均相对于06_pdf_data_analysis，练习中另有扩展标记。",
+      "groups": []
+    },
+    "2": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/01_Series与DataFrame",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "3": {
+      "status": "章节分隔页",
+      "note": "本页只是Series分隔页，不单独出题。先读第4—10页，再完成本节练习。",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "章节入口"
+        }
+      ]
+    },
+    "4": {
+      "status": "知识页",
+      "note": "第02节练习Series创建；第01节用于比较一列与整张表。DataFrame部分需读第12—13页。",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "03_pandas/01_Series与DataFrame",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "5": {
+      "status": "知识页",
+      "note": "第02节练习Series创建；第01节用于比较一列与整张表。DataFrame部分需读第12—13页。",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "03_pandas/01_Series与DataFrame",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "6": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "7": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "8": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "9": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "10": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "11": {
+      "status": "章节分隔页",
+      "note": "本页只是DataFrame分隔页，不单独出题。第12—17页读完后可完成创建练习。",
+      "groups": [
+        {
+          "lesson": "03_pandas/03_DataFrame多种创建",
+          "kind": "章节入口"
+        }
+      ]
+    },
+    "12": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/01_Series与DataFrame",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "13": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/03_DataFrame多种创建",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "03_pandas/01_Series与DataFrame",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "14": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/03_DataFrame多种创建",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "15": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/03_DataFrame多种创建",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "16": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/03_DataFrame多种创建",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "17": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/03_DataFrame多种创建",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "18": {
+      "status": "知识页",
+      "note": "课件核心为columns/index/values；head/info/describe/to_numpy在练习中标为扩展。",
+      "groups": [
+        {
+          "lesson": "03_pandas/04_查看与转换",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "19": {
+      "status": "知识页",
+      "note": "课件核心为columns/index/values；head/info/describe/to_numpy在练习中标为扩展。",
+      "groups": [
+        {
+          "lesson": "03_pandas/04_查看与转换",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "20": {
+      "status": "知识页",
+      "note": "重点辨认取一列得到Series；完整查看/转换练习可结合第18—19页完成。",
+      "groups": [
+        {
+          "lesson": "03_pandas/01_Series与DataFrame",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "03_pandas/04_查看与转换",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "21": {
+      "status": "知识页",
+      "note": "课件使用loc/iloc；at/iat是题面标明的扩展。",
+      "groups": [
+        {
+          "lesson": "03_pandas/05_loc与iloc",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "22": {
+      "status": "知识页",
+      "note": "课件使用loc/iloc；at/iat是题面标明的扩展。",
+      "groups": [
+        {
+          "lesson": "03_pandas/05_loc与iloc",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "23": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/06_组合条件筛选",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "24": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/07_修改新增删除重命名",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "25": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/07_修改新增删除重命名",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "26": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/07_修改新增删除重命名",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "27": {
+      "status": "章节分隔页",
+      "note": "本页只是计算部分分隔页，不单独出题；从第28页开始学习批量运算。",
+      "groups": [
+        {
+          "lesson": "03_pandas/08_批量运算",
+          "kind": "章节入口"
+        }
+      ]
+    },
+    "28": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/08_批量运算",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "29": {
+      "status": "知识页",
+      "note": "课件讲默认标签对齐；fill_value=0的业务前提与用法是配套扩展。",
+      "groups": [
+        {
+          "lesson": "03_pandas/09_标签对齐",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "30": {
+      "status": "知识页",
+      "note": "课件讲默认标签对齐；fill_value=0的业务前提与用法是配套扩展。",
+      "groups": [
+        {
+          "lesson": "03_pandas/09_标签对齐",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "31": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/10_聚合与统计口径",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "32": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/10_聚合与统计口径",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "33": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/10_聚合与统计口径",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "34": {
+      "status": "知识页",
+      "note": "标准库CSV与__file__路径定位不属于课件主体，需要时先补基础。",
+      "groups": [
+        {
+          "lesson": "03_pandas/11_CSV读写",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "01_基础准备/03_路径与CSV",
+          "kind": "前置补充"
+        }
+      ]
+    },
+    "35": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/11_CSV读写",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "36": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/11_CSV读写",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "37": {
+      "status": "章节分隔页",
+      "note": "本页为自学部分分隔页，不单独出题；缺失值专题从第41页开始，前3页继续练高级索引。",
+      "groups": [
+        {
+          "lesson": "03_pandas/12_识别缺失与类型",
+          "kind": "章节入口"
+        }
+      ]
+    },
+    "38": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "39": {
+      "status": "知识页",
+      "note": "行列列表选择对应第05节；对选中区域赋值对应第07节。",
+      "groups": [
+        {
+          "lesson": "03_pandas/05_loc与iloc",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "03_pandas/07_修改新增删除重命名",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "40": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/06_组合条件筛选",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "41": {
+      "status": "知识页",
+      "note": "isnull/notnull是课件核心；to_numeric错误处理为显式扩展，不是本页原代码。",
+      "groups": [
+        {
+          "lesson": "03_pandas/12_识别缺失与类型",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "42": {
+      "status": "知识页",
+      "note": "isnull/notnull是课件核心；to_numeric错误处理为显式扩展，不是本页原代码。",
+      "groups": [
+        {
+          "lesson": "03_pandas/12_识别缺失与类型",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "43": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/13_删除与填补缺失",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "44": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/13_删除与填补缺失",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "45": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/14_分组统计",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "46": {
+      "status": "知识页",
+      "note": "学完筛选、缺失、CSV和分组后，可完成第15节流程迁移；不要求只凭本页完成全部清洗。",
+      "groups": [
+        {
+          "lesson": "03_pandas/14_分组统计",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "03_pandas/15_订单分析流程",
+          "kind": "综合扩展"
+        }
+      ]
+    },
+    "47": {
+      "status": "术语总览",
+      "note": "本页为术语回顾，无新增专项题；可用流程练习复习表格处理链路。",
+      "groups": [
+        {
+          "lesson": "03_pandas/15_订单分析流程",
+          "kind": "章节综合"
+        }
+      ]
+    },
+    "48": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/01_Series与DataFrame",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "49": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/02_Series创建与标签",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "50": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "03_pandas/06_组合条件筛选",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "03_pandas/14_分组统计",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "03_pandas/11_CSV读写",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "51": {
+      "status": "结束页",
+      "note": "本页为结束页，无新增知识；先完成第15节流程，再挑战重复记录与审计原因分类。重复检查是扩展。",
+      "groups": [
+        {
+          "lesson": "03_pandas/15_订单分析流程",
+          "kind": "综合扩展"
+        },
+        {
+          "lesson": "05_综合案例/02_订单清洗分析",
+          "kind": "综合扩展"
+        }
+      ]
+    }
+  },
+  "14-matplotlib-full": {
+    "1": {
+      "status": "封面",
+      "note": "本页为封面，无专项练习。从第2页认识Figure/Axes，绘图示例可运行后观察。",
+      "groups": []
+    },
+    "2": {
+      "status": "知识页",
+      "note": "第2—6页是概念与流程，第7页开始创建Figure/Axes；完整折线代码还涉及第11页。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/01_画布与坐标区域",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "3": {
+      "status": "知识页",
+      "note": "第2—6页是概念与流程，第7页开始创建Figure/Axes；完整折线代码还涉及第11页。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/01_画布与坐标区域",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "4": {
+      "status": "知识页",
+      "note": "第2—6页是概念与流程，第7页开始创建Figure/Axes；完整折线代码还涉及第11页。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/01_画布与坐标区域",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "5": {
+      "status": "知识页",
+      "note": "第2—6页是概念与流程，第7页开始创建Figure/Axes；完整折线代码还涉及第11页。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/01_画布与坐标区域",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "6": {
+      "status": "知识页",
+      "note": "第2—6页是概念与流程，第7页开始创建Figure/Axes；完整折线代码还涉及第11页。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/01_画布与坐标区域",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "7": {
+      "status": "知识页",
+      "note": "第2—6页是概念与流程，第7页开始创建Figure/Axes；完整折线代码还涉及第11页。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/01_画布与坐标区域",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "8": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/02_多子图与尺寸",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "9": {
+      "status": "章节分隔页",
+      "note": "本页只是成对数据可视化的分隔页，不单独出题；从第10—13页开始学习折线。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/03_折线与样式",
+          "kind": "章节入口"
+        }
+      ]
+    },
+    "10": {
+      "status": "方法总览",
+      "note": "已有专项练习覆盖折线、散点、柱状；本页†标记的stem/stackplot/stairs没有独立专项练习，不强行对应。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/03_折线与样式",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "04_matplotlib/05_散点颜色与大小",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "04_matplotlib/06_柱状与分组柱状",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "11": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/03_折线与样式",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "04_matplotlib/04_标题图例刻度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "12": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/02_多子图与尺寸",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "04_matplotlib/04_标题图例刻度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "13": {
+      "status": "知识页",
+      "note": "linspace采样可回看NumPy第04节，其中同种子随机生成器是扩展。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/03_折线与样式",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "02_numpy/04_序列与随机数",
+          "kind": "跨课件复习"
+        }
+      ]
+    },
+    "14": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/05_散点颜色与大小",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "15": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/06_柱状与分组柱状",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "04_matplotlib/04_标题图例刻度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "16": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/06_柱状与分组柱状",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "04_matplotlib/04_标题图例刻度",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "17": {
+      "status": "章节分隔页",
+      "note": "本页是统计分布分隔页，不单独出题；第18—20页分别学习直方图和箱线图。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/07_直方图与分箱",
+          "kind": "章节入口"
+        },
+        {
+          "lesson": "04_matplotlib/08_箱线图",
+          "kind": "章节入口"
+        }
+      ]
+    },
+    "18": {
+      "status": "方法总览",
+      "note": "已有专项覆盖hist/boxplot；其余†自学图形没有独立专项练习。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/07_直方图与分箱",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "04_matplotlib/08_箱线图",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "19": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/07_直方图与分箱",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "20": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/08_箱线图",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "21": {
+      "status": "知识页",
+      "note": "课件核心为savefig；中文字体、目录、dpi和bbox_inches已在练习标为实用扩展。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/12_保存布局与中文",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "22": {
+      "status": "方法总览",
+      "note": "本页为方法总览：等高线见第23页、三角等高线见第24页。其他方法仅列为探索，没有逐项专项练习。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/10_网格与等高线",
+          "kind": "直接对应"
+        },
+        {
+          "lesson": "04_matplotlib/11_三角等高线",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "23": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/10_网格与等高线",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "24": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/11_三角等高线",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "25": {
+      "status": "知识页",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/09_区域填充",
+          "kind": "直接对应"
+        }
+      ]
+    },
+    "26": {
+      "status": "术语总览",
+      "note": "本页为关键术语回顾，无新增专项题；综合四图练习用于巩固已配套的常用图形。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/13_表格到可视化报告",
+          "kind": "章节综合"
+        }
+      ]
+    },
+    "27": {
+      "status": "复习题",
+      "note": "",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/01_画布与坐标区域",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "04_matplotlib/07_直方图与分箱",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "04_matplotlib/08_箱线图",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "28": {
+      "status": "复习题",
+      "note": "依题号7—12依次对应散点、填充、等高线、多子图、线型标记、文件保存。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/05_散点颜色与大小",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "04_matplotlib/09_区域填充",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "04_matplotlib/10_网格与等高线",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "04_matplotlib/02_多子图与尺寸",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "04_matplotlib/03_折线与样式",
+          "kind": "复习对应"
+        },
+        {
+          "lesson": "04_matplotlib/12_保存布局与中文",
+          "kind": "复习对应"
+        }
+      ]
+    },
+    "29": {
+      "status": "结束页",
+      "note": "本页为结束页，无新增专项题；先完成本章四图报告，再结合NumPy/Pandas挑战六图报告。",
+      "groups": [
+        {
+          "lesson": "04_matplotlib/13_表格到可视化报告",
+          "kind": "综合扩展"
+        },
+        {
+          "lesson": "05_综合案例/03_分析图表报告",
+          "kind": "综合扩展"
+        }
+      ]
+    }
+  }
+}
